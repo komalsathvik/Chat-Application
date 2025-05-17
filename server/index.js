@@ -7,12 +7,13 @@ const app=express();
 const port=3000;
 app.use(cors());
 const server=http.createServer(app);
-const io=new Server(server,{
-  cors:{
-    origin:"https://chat-application-t4vi.vercel.app/",
-    methods:['GET','POST'],
+const io = new Server(server, {
+  cors: {
+    origin: ["https://chat-application-t4vi.vercel.app", "https://chat-application-1-e6gm.onrender.com"],
+    methods: ['GET', 'POST'],
   }
 });
+
 io.on("connection",(socket)=>{
   console.log(`user connected with id : ${socket.id}`);
   socket.on("join-room",(data)=>{
