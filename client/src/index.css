@@ -1,0 +1,200 @@
+/* Reset and Base Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* App Wrapper */
+.app-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Main Box for both join & chat */
+.app-box {
+  width: 100%;
+  max-width: 800px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* JOIN CHAT Styling */
+.join-chat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.join-chat-container h2 {
+  font-size: 28px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.join-chat-container input {
+  width: 80%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.join-chat-container button {
+  padding: 12px 30px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.join-chat-container button:hover {
+  background-color: #0056b3;
+}
+
+
+/* ------------------ CHAT HEADER ------------------ */
+
+.chat-header {
+  text-align: center;
+  font-size: 28px;
+  color: #007bff;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* ------------------ CHAT BODY ------------------ */
+
+.chat-body {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 15px;
+  height: 400px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.chat-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-body::-webkit-scrollbar-thumb {
+  background-color: #007bff;
+  border-radius: 10px;
+}
+
+.chat-body::-webkit-scrollbar-track {
+  background: #e9ecef;
+}
+
+/* ------------------ CHAT FOOTER ------------------ */
+
+.chat-footer {
+  display: flex;
+  gap: 10px;
+}
+
+.chat-footer input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.chat-footer button {
+  background-color: #198754;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.chat-footer button:hover {
+  background-color: #157347;
+}
+
+/* ------------------ MESSAGES ------------------ */
+
+.message {
+  max-width: 75%;
+  padding: 10px 15px;
+  border-radius: 12px;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+}
+
+.message.you {
+  background-color: #d1e7dd;
+  align-self: flex-end;
+  text-align: right;
+}
+
+.message.other {
+  background-color: #f8d7da;
+  align-self: flex-start;
+  text-align: left;
+}
+
+.message-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #6c757d;
+  margin-bottom: 5px;
+}
+
+.message-text {
+  font-size: 16px;
+  color: #212529;
+  line-height: 1.4;
+}
+
+/* ------------------ RESPONSIVE ------------------ */
+
+@media screen and (max-width: 600px) {
+  .chat-container {
+    padding: 20px;
+    width: 95%;
+  }
+
+  .chat-footer input {
+    font-size: 14px;
+  }
+
+  .chat-footer button {
+    font-size: 16px;
+  }
+
+  .message-text {
+    font-size: 14px;
+  }
+
+  .join-chat input {
+    width: 100%;
+  }
+}
