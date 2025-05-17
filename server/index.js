@@ -9,7 +9,7 @@ app.use(cors());
 const server=http.createServer(app);
 const io=new Server(server,{
   cors:{
-    origin:"chat-application-t4vi-l0zhbjdor-komalsathviks-projects.vercel.app",
+    origin:"https://chat-application-t4vi.vercel.app/",
     methods:['GET','POST'],
   }
 });
