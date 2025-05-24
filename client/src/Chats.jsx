@@ -58,14 +58,19 @@ async function sendMessage() {
         <div ref={messagesEndRef} />
       </div>
       <div className="chat-footer">
-        <input
-          type="text"
-          placeholder="Type your message"
-          value={currMessage}
-          onChange={(e) => setCurrMessage(e.target.value)}
-        />
-        <button onClick={sendMessage}>&#9658;</button>
-      </div>
+  <input
+    type="text"
+    placeholder="Type your message"
+    value={currMessage}
+    onChange={(e) => setCurrMessage(e.target.value)}
+    onKeyDown={(e) => {
+      if (e.key === 'Enter') {
+        sendMessage();
+      }
+    }}
+  />
+  <button onClick={sendMessage}>&#9658;</button>
+</div>
     </>
   );
 }
